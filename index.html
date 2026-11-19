@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="AUDIXA — your music, your set. Build a queue with Spotify and YouTube tracks.">
+  <title>AUDIXA — Your music. Your set.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="AUDIXA home"><span class="brand-mark">A</span><span>AUDIXA</span></a>
+    <span class="top-note"><i></i> YOUR MUSIC SPACE</span>
+    <a class="github-link" href="https://github.com/Dip7-only/AUDIXA---AI-Powered-DJ-Music-Experience" target="_blank" rel="noreferrer">Project <span>↗</span></a>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> THE AUX, REIMAGINED</div>
+      <h1>YOUR MUSIC.<br><em>YOUR SET.</em></h1>
+      <p class="hero-copy">Bring your favourite tracks together. Build a queue and let the music take over.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="section-head">
+        <div><span class="kicker">01 / YOUR PLAYER</span><h2>Now playing</h2></div>
+        <span class="live-pill"><span></span> READY</span>
+      </div>
+      <div class="player-card">
+        <div class="player-placeholder" id="playerPlaceholder">
+          <div class="vinyl"><div class="vinyl-center">A</div></div>
+          <p>Your next favourite moment starts here.</p>
+          <span>Add a Spotify or YouTube track below</span>
+        </div>
+        <div class="embed-wrap" id="embedWrap" hidden></div>
+        <div class="player-footer"><span id="playingLabel">NOTHING PLAYING YET</span><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+      </div>
+    </section>
+
+    <section class="workspace add-section">
+      <div class="section-head">
+        <div><span class="kicker">02 / BUILD YOUR SET</span><h2>Add a track</h2></div>
+        <span class="count" id="trackCount">0 TRACKS</span>
+      </div>
+      <form class="add-form" id="addForm">
+        <label class="sr-only" for="trackUrl">Spotify or YouTube link</label>
+        <input id="trackUrl" type="url" placeholder="Paste a Spotify or YouTube link…" autocomplete="url" required>
+        <button type="submit" class="add-button"><span>＋</span> Add track</button>
+      </form>
+      <p class="helper">Works with public Spotify track links and YouTube video links. Playback is provided by the official embedded player.</p>
+      <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="workspace queue-section">
+      <div class="section-head">
+        <div><span class="kicker">03 / UP NEXT</span><h2>Your queue</h2></div>
+        <button class="clear-button" id="clearQueue" type="button">Clear all</button>
+      </div>
+      <div class="queue-list" id="queueList">
+        <div class="empty-queue"><span class="empty-icon">♫</span><strong>Your queue is waiting</strong><span>Add a track to get the party started.</span></div>
+      </div>
+    </section>
+
+    <footer class="footer"><span class="brand-small">AUDIXA<span>®</span></span><span>Made for the love of music.</span><span>Spotify and YouTube are third-party services.</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
